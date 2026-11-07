@@ -1,0 +1,6 @@
+[
+  { "id": 1, "name": "Asha", "role": "admin", "active": true, "builds": 1204 },
+  { "id": 2, "name": "Bilal", "role": "viewer", "active": false, "builds": 0 },
+  { "id": 3, "name": "Chen", "role": "editor", "active": true, "builds": 87 },
+  { "id": 4, "name": "Dara", "role": "viewer", "active": true, "builds": 15, "team": "infra" }
+]

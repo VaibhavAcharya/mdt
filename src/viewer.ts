@@ -123,6 +123,7 @@ export class Viewer {
   private contentWidth = 80;
   private watched: string | undefined;
   private finished: () => void = () => {};
+  private terminalBg: string | undefined;
 
   constructor(docs: Doc[], opts: ViewerOptions, input: ReadStream | FsReadStream, output: WriteStream) {
     this.docs = docs;
@@ -164,7 +165,7 @@ export class Viewer {
     this.output.write(ENTER_SCREEN);
     const restore = (): void => {
       if (typeof tty.setRawMode === 'function') tty.setRawMode(false);
-      this.output.write((this.opts.imageProtocol === 'kitty' ? KITTY_CLEAR : '') + LEAVE_SCREEN);
+      this.output.write((this.opts.imageProtocol === 'kitty' ? KITTY_CLEAR : '') + (this.terminalBg ? '\x1b]111\x07' : '') + LEAVE_SCREEN);
     };
     process.on('exit', restore);
     const onSignal = (): void => this.quit();
@@ -949,6 +950,10 @@ export class Viewer {
     screen.push(this.statusBar());
     const base: Style = { fg: theme.fg, bg: theme.bg };
     let out = '\x1b[?2026h';
+    if (this.opts.color && this.terminalBg !== theme.bg) {
+      out += `\x1b]11;${theme.bg}\x07`;
+      this.terminalBg = theme.bg;
+    }
     if (this.opts.imageProtocol === 'kitty') out += KITTY_CLEAR;
     screen.forEach((row, r) => {
       out += `\x1b[${r + 1};1H${serializeSpans(padSpans(row, this.cols, {}), { color: this.opts.color, styles: true, links: true, baseStyle: base })}`;
