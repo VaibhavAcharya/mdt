@@ -2,6 +2,27 @@
 
 Markdown in terminal. An interactive Markdown and JSON viewer written in TypeScript.
 
+![mdt showing syntax highlighted code](docs/screenshots/code.png)
+
+## Screenshots
+
+| | |
+|---|---|
+| Lists, tasks and quotes | Alerts and tables |
+| ![Lists, tasks and quotes](docs/screenshots/lists-tasks-quotes.png) | ![Alerts and tables](docs/screenshots/alerts-tables.png) |
+| Mermaid diagrams | Images |
+| ![Mermaid diagrams](docs/screenshots/diagrams.png) | ![Images](docs/screenshots/images.png) |
+| Math | Search |
+| ![Math](docs/screenshots/math.png) | ![Search](docs/screenshots/search.png) |
+| Table of contents | Link picker |
+| ![Table of contents](docs/screenshots/toc.png) | ![Link picker](docs/screenshots/links.png) |
+| JSON explorer | Slides |
+| ![JSON explorer](docs/screenshots/json.png) | ![Slides](docs/screenshots/slides.png) |
+| Light theme | Help |
+| ![Light theme](docs/screenshots/light.png) | ![Help](docs/screenshots/help.png) |
+
+To try every feature yourself, open the [examples](examples/README.md): `mdt examples/README.md`.
+
 ## Features
 
 - Interactive viewer with keyboard and mouse scrolling
