@@ -34,7 +34,7 @@ Markdown in terminal. An interactive Markdown and JSON viewer written in TypeScr
 Requires Node 24.
 
 ```bash
-npm install -g mdt-cli
+npm install -g @vaibhavacharya_/mdt
 ```
 
 From source:

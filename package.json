@@ -1,5 +1,5 @@
 {
-  "name": "mdt-cli",
+  "name": "@vaibhavacharya_/mdt",
   "version": "0.1.0",
   "description": "Markdown in terminal: an interactive Markdown viewer",
   "license": "MIT",
