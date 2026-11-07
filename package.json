@@ -1,8 +1,13 @@
 {
-  "name": "mdt",
+  "name": "mdt-cli",
   "version": "0.1.0",
   "description": "Markdown in terminal: an interactive Markdown viewer",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VaibhavAcharya/mdt.git"
+  },
+  "homepage": "https://github.com/VaibhavAcharya/mdt",
   "type": "module",
   "bin": {
     "mdt": "dist/main.js"
@@ -31,5 +36,6 @@
     "@types/node": "^26.6.6",
     "@types/pngjs": "^6.0.5",
     "typescript": "^7.0.2"
-  }
+  },
+  "packageManager": "pnpm@11.18.0"
 }
