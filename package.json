@@ -1,0 +1,35 @@
+{
+  "name": "mdt",
+  "version": "0.1.0",
+  "description": "Markdown in terminal: an interactive Markdown viewer",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "mdt": "dist/main.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "node src/main.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test test/*.test.ts"
+  },
+  "dependencies": {
+    "jpeg-js": "^0.4.4",
+    "marked": "^18.1.3",
+    "pngjs": "^7.0.0",
+    "shiki": "^4.6.0",
+    "smol-toml": "^1.9.1",
+    "string-width": "^8.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/pngjs": "^6.0.5",
+    "typescript": "^7.0.2"
+  }
+}
